@@ -343,6 +343,28 @@ button:focus {
     background-position: bottom center;
 }
 
+.log-btn{
+    position: relative;
+}
+
+.log-btn::after {
+    content: 'Login';
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    padding: 0px 8px 0px 8px;
+    border-radius: 5px;
+    color: white;
+    transform: scale(0);
+    transition: transform ease-out 150ms;
+    top: 40px;
+}
+
+.log-btn:hover::after {
+    transform: scale(1);
+}
+
 .social-icons a {
     font-size: 16px;
     color: #203656;
@@ -354,6 +376,17 @@ button:focus {
 
 .social-icons li:not(:last-child) {
     margin-right: 1rem;
+}
+
+.blog-write {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 992px){
+    .blog-write {
+        visibility: visible;
+        color: #8f9bad;
+    }
 }
 
 /* ************ canvas menu *********** */
