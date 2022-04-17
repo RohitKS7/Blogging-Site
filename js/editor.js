@@ -5,8 +5,5 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener( 'click', (e)=>{
         console.log(e);
         blogCon.innerHTML = tinyMCE.get('mytextarea').getContent();
-    })
-})
-
-
-
+    });
+});
