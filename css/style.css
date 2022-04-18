@@ -260,6 +260,23 @@ body.down .header-default.clone {
     margin-left: 0;
 }
 
+@media (max-width: 320px){
+    .header-right .header-buttons {
+        margin-left: 0px;
+    }
+
+    img.logoimg {
+        position: relative;
+        top: -20px;
+        left: 5em;
+    }
+
+    .header-right {
+        left: 4em;
+        position: relative;
+    }
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 1.3rem;
@@ -365,6 +382,29 @@ button:focus {
     transform: scale(1);
 }
 
+.blog-btn{
+    position: relative;
+    visibility: collapse;
+}
+
+.blog-btn::after {
+    content: 'Write_Blogs';
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+    padding: 0px 8px 0px 8px;
+    border-radius: 5px;
+    color: white;
+    transform: scale(0);
+    transition: transform ease-out 150ms;
+    top: 40px;
+}
+
+.blog-btn:hover::after {
+    transform: scale(1);
+}
+
 .social-icons a {
     font-size: 16px;
     color: #203656;
@@ -378,14 +418,10 @@ button:focus {
     margin-right: 1rem;
 }
 
-.blog-write {
-    visibility: hidden;
-}
-
-@media only screen and (max-width: 992px){
-    .blog-write {
+@media (max-width: 992px){
+    .blog-btn{
+        position: relative;
         visibility: visible;
-        color: #8f9bad;
     }
 }
 
